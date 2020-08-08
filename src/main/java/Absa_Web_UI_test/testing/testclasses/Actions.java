@@ -115,7 +115,7 @@ public class Actions extends BaseClass {
                 if (!SeleniumDriverInstance.retrieve_TableRow(PageObjects.Retrieve_RowData(section, path))) {
                     return "Failed to Table Row data using the xpath: " + section;
                 }
-                Reporting.stepPassedScreenshot("Table Row Data: "+ SeleniumDriver.rowData);
+                Reporting.rowData(SeleniumDriver.rowData);
                 break;
 
             default:

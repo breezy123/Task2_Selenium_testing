@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="58820" started-at="2020-08-08T09:44:34Z" finished-at="2020-08-08T09:45:33Z">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="58820" started-at="2020-08-08T09:44:34Z" finished-at="2020-08-08T09:45:33Z">
+      <class name="Absa_Web_UI_test.Task_Tow_TestSuite_one">
+        <test-method status="PASS" signature="Way2Automation_one()" name="Way2Automation_one" duration-ms="34492" started-at="2020-08-08T11:44:34Z" finished-at="2020-08-08T11:45:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Way2Automation_one -->
+      </class> <!-- Absa_Web_UI_test.Task_Tow_TestSuite_one -->
+      <class name="Absa_Web_UI_test.Task_Tow_TestSuite_two">
+        <test-method status="PASS" signature="Way2Automation_two()" name="Way2Automation_two" duration-ms="24164" started-at="2020-08-08T11:45:08Z" finished-at="2020-08-08T11:45:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Way2Automation_two -->
+      </class> <!-- Absa_Web_UI_test.Task_Tow_TestSuite_two -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

@@ -27,7 +27,7 @@ public class Task_Tow_TestSuite_two extends BaseClass
     }
 
     @Test
-    public void Way2Automation_test1()  {
+    public void Way2Automation_two()  {
         String test = ExecuteTest("C:\\Absa-Selenium-Project\\KeywordDrivenTestPacks\\TaskTwo_Automation_two.xlsx");
         Assert.assertNull(test,test);
     }
