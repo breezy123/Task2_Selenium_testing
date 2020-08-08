@@ -81,6 +81,17 @@ public class Reporting extends BaseClass {
         System.out.println("[STEP PASSED] - "+message);
     }
 
+    public static void rowData(String message)
+    {
+        if(report == null) setup();
+        if(!checkTests()) createTest();
+
+        String[] recordsSplit = message.split(" ");// the array splits the text extracted from the table record
+        currentTest.pass("<b>FIRST NAME</b>"+"<pre>"+recordsSplit[0]+"</pre>"+"<b>LAST NAME</b>"+"<pre>"+recordsSplit[1]+"</pre>"+"<b>USERNAME</b>"+"<pre>"+recordsSplit[2]+"</pre>"+"<b>ROLE</b>"+"<pre>"+recordsSplit[3]+"</pre>"+"<b>E-MAIL</b>"+"<pre>"+recordsSplit[4]+"</pre>"+"<b>CELL PHONE</b>"+"<pre>"+recordsSplit[5]+"</pre>");
+
+        //System.out.println("[STEP PASSED] - "+message);
+    }
+
     public static void stepPassedScreenshot(String message)
     {
         if(report == null) setup();
