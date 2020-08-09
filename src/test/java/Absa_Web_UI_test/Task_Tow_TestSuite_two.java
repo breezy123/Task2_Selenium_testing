@@ -3,12 +3,14 @@ package Absa_Web_UI_test;
 import Absa_Web_UI_test.core.BaseClass;
 import Absa_Web_UI_test.tools.Reporting;
 import Absa_Web_UI_test.tools.SeleniumDriver;
+import junitparams.JUnitParamsRunner;
 import org.junit.*;
 import org.junit.rules.TestName;
+import org.junit.runner.RunWith;
 
 import static Absa_Web_UI_test.testing.testclasses.Actions.ExecuteTest;
 
-//@RunWith(JUnitParamsRunner.class)
+@RunWith(JUnitParamsRunner.class)
 public class Task_Tow_TestSuite_two extends BaseClass
 {
 

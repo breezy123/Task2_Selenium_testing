@@ -1,6 +1,8 @@
 package Absa_Web_UI_test.core;
 
 import Absa_Web_UI_test.tools.SeleniumDriver;
+
+/* this class holds / positions the the directory of the extent report*/
 public class BaseClass {
 
     public static SeleniumDriver SeleniumDriverInstance;

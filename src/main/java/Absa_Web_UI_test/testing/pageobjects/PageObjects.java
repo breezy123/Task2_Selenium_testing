@@ -3,6 +3,9 @@ package Absa_Web_UI_test.testing.pageobjects;
 import org.omg.CORBA.PUBLIC_MEMBER;
 import org.openqa.selenium.By;
 
+/* the page-object class contains all different Xpaths for actions such as
+ clicking, entering, navigating , getting text and retrieving table record data.
+ */
 public class PageObjects
 {
 

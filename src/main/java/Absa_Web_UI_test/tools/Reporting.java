@@ -126,6 +126,7 @@ public class Reporting extends BaseClass {
 
     private static boolean checkTests()
     {
+        String testing =testName;
         return currentTest.getModel().getName().equals(testName);
     }
 
