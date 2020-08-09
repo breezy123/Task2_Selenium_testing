@@ -9,13 +9,15 @@ import Absa_Web_UI_test.tools.Reporting;
 import Absa_Web_UI_test.tools.SeleniumDriver;
 import org.apache.poi.ss.usermodel.Workbook;
 
-import java.util.Random;
+/*
+ Test Action class, here is where the actual execution occurs. ExcelReaderUtility class is called
+ to utilize the data stored in the external spreed-sheet file.
 
-//import static Absa_Web_UI_test.tools.SeleniumDriver; must create a function that generates a unique ID
+ Keywords are used to perform a certain action (CLICK_BUTTON, ENTER_TEXT). These keywords come straight
+ from the spread-sheet file with the actual data to click, enter, validate text-field/button.
 
+ */
 public class Actions extends BaseClass {
-
-    private static String uniqueWord ="";
 
     public static String ExecuteTest(String workBook) {
 
@@ -23,12 +25,12 @@ public class Actions extends BaseClass {
         {
             String test = "";
 
-            Workbook _workBook = ExcelReaderUtility.getWorkbook(workBook);
+            Workbook _workBook = ExcelReaderUtility.getWorkbook(workBook); //passing the actual file path to get the workbook
 
-            DataTable table;
+            DataTable table; // creating table structure to store the column names in the spread-sheet file (section, path, action and value
 
             for (int i = 0; i < _workBook.getNumberOfSheets(); i++) {
-                table = ExcelReaderUtility.getSheetAsTable(workBook, _workBook.getSheetAt(i).getSheetName());
+                table = ExcelReaderUtility.getSheetAsTable(workBook, _workBook.getSheetAt(i).getSheetName()); //getting the sheet as table, executing data on that actual Sheet name
 
                 for (DataRow dr : table.Rows) {
                     String sectionValue = dr.getColumnValue("Section").toString();
@@ -36,7 +38,7 @@ public class Actions extends BaseClass {
                     String actionValue = dr.getColumnValue("Action").toString();
                     String actualValue = dr.getColumnValue("Value").toString();
 
-                    test = ActionPerform(sectionValue, pathValue, actionValue, actualValue);
+                    test = ActionPerform(sectionValue, pathValue, actionValue, actualValue); // the ActionPerform method is called here, to perform the desired actions
 
                     if (test != null) {
                         return Reporting.testFailed(test);
@@ -87,7 +89,7 @@ public class Actions extends BaseClass {
                 if (!SeleniumDriverInstance.EnterText(PageObjects.EnterText(section, path), value)) {
                     return "Failed to Enter text: " + value + " using the xpath: " + PageObjects.EnterText(section, path);
                 }
-                Reporting.stepPassedScreenshot("Entered text: " + value);
+                Reporting.stepPassed("Entered text: " + value);
                 break;
 
             case "CLICK_BUTTON":
@@ -108,7 +110,7 @@ public class Actions extends BaseClass {
                 if (!SeleniumDriverInstance.enter_Unique_text(PageObjects.EnterText(section, path),value)) {
                     return "Failed to enter unique text using the xpath: " + SeleniumDriverInstance.enter_Unique_text(PageObjects.EnterText(section, path),value);
                 }
-                Reporting.stepPassedScreenshot("Entered unique text for username: "+value+"-"+SeleniumDriverInstance.generate_UniqueText());
+                Reporting.stepPassed("Entered unique text for username: "+value+"-"+SeleniumDriverInstance.generate_UniqueText());
                 break;
 
             case "RETRIEVE_ROW_TEST":

@@ -1,7 +1,6 @@
 Absa_Web_UI_test\entities\DataColumn.class
 Absa_Web_UI_test\core\BaseClass.class
 Absa_Web_UI_test\entities\DataTable.class
-Absa_Web_UI_test\tools\DataBaseUtility.class
 Absa_Web_UI_test\tools\SeleniumDriver$1.class
 Absa_Web_UI_test\tools\Reporting.class
 Absa_Web_UI_test\tools\SeleniumDriver$BrowserType.class
